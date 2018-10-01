@@ -1,18 +1,26 @@
 import React from 'react'
-import { string, func, shape } from 'prop-types'
+import { string, func, shape, arrayOf } from 'prop-types'
 
-const CalcButtonArray = ({ symbols, uniqueName }) => (
+/**
+ * Represents a column or row of buttons. Each one can have an optional associated onClick handler.
+ * @param {Object} props
+ * @param {Array<{text: string, onClick?: function}>} props.symbols
+ * @param {string} props.keyPrefix prefix for react-key of each button
+ * @param {function} props.defaultHandler called when symbol.onClick is falsy
+ */
+const CalcButtonArray = ({ symbols, keyPrefix, defaultHandler }) => (
   <div>
-    {symbols.map(s => <button key={`${uniqueName}-${s.text}`} onClick={s.onClick}>{s.text}</button>)}
+    {symbols.map(s => <button key={`${keyPrefix}-${s.text}`} onClick={s.onClick || defaultHandler}>{s.text}</button>)}
   </div>
 )
 
 CalcButtonArray.propTypes = {
-  uniqueName: string.isRequired,
-  symbols: shape({
-    text: string,
+  keyPrefix: string.isRequired,
+  defaultHandler: func.isRequired,
+  symbols: arrayOf(shape({
+    text: string.isRequired,
     onClick: func
-  }).isRequired
+  })).isRequired
 }
 
 export default CalcButtonArray

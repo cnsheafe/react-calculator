@@ -7,13 +7,15 @@ configure({ adapter: new Adapter() })
 
 describe('<CalcButton />', () => {
   const symbols = [
-    { text: '+', onClick: jest.fn()},
-    { text: '-', onClick: jest.fn()},
-    { text: '=', onClick: jest.fn()}
+    { text: '+', onClick: jest.fn() },
+    { text: '-', onClick: jest.fn() },
+    { text: '=', onClick: jest.fn() }
   ]
 
   it('should match the snapshot', () => {
-    const wrapper = shallow(<CalcButtonArray symbols={symbols} uniqueName="calc-1" />)
+    const wrapper = shallow(
+      <CalcButtonArray symbols={symbols} keyPrefix="calc-1" defaultHandler={jest.fn()} />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })
