@@ -4,7 +4,7 @@ import './App.css'
 import Calculator from './calculator/calculator.index'
 
 const App = () => (
-  <Calculator></Calculator>
+  <Calculator />
 )
 
 export default App
