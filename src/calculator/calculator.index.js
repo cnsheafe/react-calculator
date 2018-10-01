@@ -3,22 +3,34 @@ import CalcInput from './calc-input'
 import CalcButtonArray from './calc-button-array'
 
 export default class Calculator extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      total: undefined,
-      buffer: '',
-    }
+  state = {
+    total: undefined,
+    buffer: '',
   }
 
+  appendButtonSymbolToBuffer = (evt) => {
+    const symbol = evt.target.textContent
+    const { buffer } = this.state
+
+    this.setState({ buffer: `${buffer}${symbol}` })
+  }
+
+  appendKeyStrokesToBuffer = (evt) => {
+    const buffer = evt.target.value
+
+    this.setState({ buffer})
+  }
 
   render() {
-    const { total } = this.state
+    const { total, buffer } = this.state
 
     return (
       <div>
-        <CalcInput total={total} onChange={this.onInputChange} />
+        <CalcInput
+          total={total}
+          onChange={this.appendKeyStrokesToBuffer}
+          buffer={buffer}
+        />
         <div>
           <CalcButtonArray
             symbols={[
@@ -27,7 +39,8 @@ export default class Calculator extends React.Component {
               { text: 'X' },
               { text: 'DEL' },
             ]}
-            uniqueName="calc-0"
+            defaultHandler={this.appendButtonSymbolToBuffer}
+            keyPrefix="calc-0"
           />
           <CalcButtonArray
             symbols={[
@@ -36,7 +49,8 @@ export default class Calculator extends React.Component {
               { text: '9' },
               { text: '-' },
             ]}
-            uniqueName="calc-1"
+            defaultHandler={this.appendButtonSymbolToBuffer}
+            keyPrefix="calc-1"
           />
           <CalcButtonArray
             symbols={[
@@ -45,7 +59,8 @@ export default class Calculator extends React.Component {
               { text: '6' },
               { text: '+' },
             ]}
-            uniqueName="calc-2"
+            defaultHandler={this.appendButtonSymbolToBuffer}
+            keyPrefix="calc-2"
           />
           <CalcButtonArray
             symbols={[
@@ -54,7 +69,8 @@ export default class Calculator extends React.Component {
               { text: '3' },
               { text: '=' },
             ]}
-            uniqueName="calc-3"
+            defaultHandler={this.appendButtonSymbolToBuffer}
+            keyPrefix="calc-3"
           />
           <CalcButtonArray
             symbols={[
@@ -62,7 +78,8 @@ export default class Calculator extends React.Component {
               { text: '0' },
               { text: '.' },
             ]}
-            uniqueName="calc-4"
+            defaultHandler={this.appendButtonSymbolToBuffer}
+            keyPrefix="calc-4"
           />
         </div>
       </div>

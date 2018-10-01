@@ -1,9 +1,9 @@
 import React from 'react'
 import { func, number, string } from 'prop-types'
 
-const CalcInput = ({ onChange, total, errorMessage }) => (
+const CalcInput = ({ onChange, total, errorMessage, buffer }) => (
   <div>
-    <input type="text" onChange={onChange} />
+    <input type="text" value={buffer} onChange={onChange} />
     <div>{errorMessage || total}</div>
   </div>
 )
@@ -11,6 +11,7 @@ const CalcInput = ({ onChange, total, errorMessage }) => (
 CalcInput.propTypes = {
   onChange: func.isRequired,
   total: number.isRequired,
+  buffer: string.isRequired,
   errorMessage: string, 
 }
 
