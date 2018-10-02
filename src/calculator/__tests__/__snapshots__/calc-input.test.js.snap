@@ -4,6 +4,7 @@ exports[`<CalcInput /> should display an error message 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CalcInput
+    buffer="8+10"
     errorMessage="Malformed input."
     onChange={[Function]}
     total={18}
@@ -25,7 +26,7 @@ ShallowWrapper {
         <input
           onChange={[Function]}
           type="text"
-          value={undefined}
+          value="8+10"
 />,
         <div>
           Malformed input.
@@ -41,7 +42,7 @@ ShallowWrapper {
         "props": Object {
           "onChange": [Function],
           "type": "text",
-          "value": undefined,
+          "value": "8+10",
         },
         "ref": null,
         "rendered": null,
@@ -71,7 +72,7 @@ ShallowWrapper {
           <input
             onChange={[Function]}
             type="text"
-            value={undefined}
+            value="8+10"
 />,
           <div>
             Malformed input.
@@ -87,7 +88,7 @@ ShallowWrapper {
           "props": Object {
             "onChange": [Function],
             "type": "text",
-            "value": undefined,
+            "value": "8+10",
           },
           "ref": null,
           "rendered": null,
@@ -134,6 +135,7 @@ exports[`<CalcInput /> should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CalcInput
+    buffer="8+10"
     errorMessage={undefined}
     onChange={[Function]}
     total={18}
@@ -155,7 +157,7 @@ ShallowWrapper {
         <input
           onChange={[Function]}
           type="text"
-          value={undefined}
+          value="8+10"
 />,
         <div>
           18
@@ -171,7 +173,7 @@ ShallowWrapper {
         "props": Object {
           "onChange": [Function],
           "type": "text",
-          "value": undefined,
+          "value": "8+10",
         },
         "ref": null,
         "rendered": null,
@@ -201,7 +203,7 @@ ShallowWrapper {
           <input
             onChange={[Function]}
             type="text"
-            value={undefined}
+            value="8+10"
 />,
           <div>
             18
@@ -217,7 +219,7 @@ ShallowWrapper {
           "props": Object {
             "onChange": [Function],
             "type": "text",
-            "value": undefined,
+            "value": "8+10",
           },
           "ref": null,
           "rendered": null,

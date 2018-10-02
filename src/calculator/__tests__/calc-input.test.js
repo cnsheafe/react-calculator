@@ -10,6 +10,7 @@ describe('<CalcInput />', () => {
   const props = {
     onChange: jest.fn(),
     total: 18,
+    buffer: '8+10',
     errorMessage: undefined,
   }
 

@@ -10,8 +10,8 @@ const CalcInput = ({ onChange, total, errorMessage, buffer }) => (
 
 CalcInput.propTypes = {
   onChange: func.isRequired,
-  total: number.isRequired,
   buffer: string.isRequired,
+  total: number,
   errorMessage: string, 
 }
 
