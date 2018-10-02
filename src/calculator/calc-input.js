@@ -1,17 +1,24 @@
 import React from 'react'
-import { func, number, string } from 'prop-types'
+import { func, string } from 'prop-types'
 
-const CalcInput = ({ onChange, total, errorMessage, buffer }) => (
+const CalcInput = React.forwardRef(({ onChange, errorMessage, buffer, updateCursorPosition, calculate }, ref) => (
   <div>
-    <input type="text" value={buffer} onChange={onChange} />
-    <div>{errorMessage || total}</div>
+    <input
+      type="text"
+      value={buffer}
+      onChange={onChange}
+      onClick={updateCursorPosition}
+      onKeyPress={calculate}
+      ref={ref}
+    />
+    <div>{errorMessage}</div>
   </div>
-)
+))
 
 CalcInput.propTypes = {
   onChange: func.isRequired,
+  updateCursorPosition: func.isRequired,
   buffer: string.isRequired,
-  total: number,
   errorMessage: string, 
 }
 

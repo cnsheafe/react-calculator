@@ -18,16 +18,18 @@ describe('<Calculator />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  describe('#appendButtonSymbolToBuffer', () => {
+  describe('#insertButtonSymbolToBuffer', () => {
     const evt = {
       target: {
         textContent: 7
-      }
+      },
+      preventDefault: jest.fn(),
     }
 
     it('should append a symbol to the buffer', () => {
-      instance.appendButtonSymbolToBuffer(evt)
+      instance.insertButtonSymbolToBuffer(evt)
       expect(wrapper.state().buffer).toBe('7')
+      expect(evt.preventDefault).toHaveBeenCalled()
     })
   })
 
@@ -39,7 +41,12 @@ describe('<Calculator />', () => {
     }
 
     it('should update the buffer with the new input value', () => {
-      instance.appendKeyStrokesToBuffer(evt)
+      instance.inputRef = {
+        current: {
+          selectionStart: 10
+        }
+      }
+      instance.insertKeyStrokesToBuffer(evt)
       expect(wrapper.state().buffer).toBe('+')
     })
   })
@@ -94,13 +101,22 @@ describe('<Calculator />', () => {
       const parsed = instance.parseSquareRoot('\u221a100')
       expect(parsed).toBe('10')
     })
+
+    it('should parse input when square root has leading coeffecient', () => {
+      const parsed = instance.parseSquareRoot('10\u221a100')
+      expect(parsed).toBe('100')
+    })
   })
 
   describe('#parseInput', () => {
+    const evt = {
+      preventDefault: jest.fn(),
+    }
     it('should parse input with mixed operators', () => {
       wrapper.setState({ buffer: '3+3*5-6' })
-      const parsed = instance.parseInput()
-      expect(parsed).toBe('12')
+      instance.parseInput(evt)
+      expect(wrapper.state().buffer).toBe('12')
+      expect(evt.preventDefault).toHaveBeenCalled()
     })
   })
 })

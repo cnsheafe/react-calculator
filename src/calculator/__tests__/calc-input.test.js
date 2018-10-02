@@ -9,6 +9,7 @@ configure({ adapter: new Adapter() })
 describe('<CalcInput />', () => {
   const props = {
     onChange: jest.fn(),
+    updateCursorPosition: jest.fn(),
     total: 18,
     buffer: '8+10',
     errorMessage: undefined,

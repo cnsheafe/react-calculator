@@ -3,11 +3,12 @@
 exports[`<CalcInput /> should display an error message 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CalcInput
+  Symbol(enzyme.__unrendered__): <Unknown
     buffer="8+10"
     errorMessage="Malformed input."
     onChange={[Function]}
     total={18}
+    updateCursorPosition={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,6 +26,8 @@ ShallowWrapper {
       "children": Array [
         <input
           onChange={[Function]}
+          onClick={[Function]}
+          onKeyPress={undefined}
           type="text"
           value="8+10"
 />,
@@ -41,6 +44,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "onChange": [Function],
+          "onClick": [Function],
+          "onKeyPress": undefined,
           "type": "text",
           "value": "8+10",
         },
@@ -71,6 +76,8 @@ ShallowWrapper {
         "children": Array [
           <input
             onChange={[Function]}
+            onClick={[Function]}
+            onKeyPress={undefined}
             type="text"
             value="8+10"
 />,
@@ -87,6 +94,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
+            "onClick": [Function],
+            "onKeyPress": undefined,
             "type": "text",
             "value": "8+10",
           },
@@ -134,11 +143,12 @@ ShallowWrapper {
 exports[`<CalcInput /> should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CalcInput
+  Symbol(enzyme.__unrendered__): <Unknown
     buffer="8+10"
     errorMessage={undefined}
     onChange={[Function]}
     total={18}
+    updateCursorPosition={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -156,12 +166,12 @@ ShallowWrapper {
       "children": Array [
         <input
           onChange={[Function]}
+          onClick={[Function]}
+          onKeyPress={undefined}
           type="text"
           value="8+10"
 />,
-        <div>
-          18
-</div>,
+        <div />,
       ],
     },
     "ref": null,
@@ -172,6 +182,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "onChange": [Function],
+          "onClick": [Function],
+          "onKeyPress": undefined,
           "type": "text",
           "value": "8+10",
         },
@@ -184,10 +196,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": 18,
+          "children": undefined,
         },
         "ref": null,
-        "rendered": 18,
+        "rendered": null,
         "type": "div",
       },
     ],
@@ -202,12 +214,12 @@ ShallowWrapper {
         "children": Array [
           <input
             onChange={[Function]}
+            onClick={[Function]}
+            onKeyPress={undefined}
             type="text"
             value="8+10"
 />,
-          <div>
-            18
-</div>,
+          <div />,
         ],
       },
       "ref": null,
@@ -218,6 +230,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
+            "onClick": [Function],
+            "onKeyPress": undefined,
             "type": "text",
             "value": "8+10",
           },
@@ -230,10 +244,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": 18,
+            "children": undefined,
           },
           "ref": null,
-          "rendered": 18,
+          "rendered": null,
           "type": "div",
         },
       ],
