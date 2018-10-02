@@ -26,6 +26,7 @@ ShallowWrapper {
         <div>
           <CalcButtonArray
                     defaultHandler={[Function]}
+                    keyPrefix="calc-0"
                     symbols={
                               Array [
                                         Object {
@@ -42,10 +43,10 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    uniqueName="calc-0"
           />
           <CalcButtonArray
                     defaultHandler={[Function]}
+                    keyPrefix="calc-1"
                     symbols={
                               Array [
                                         Object {
@@ -62,10 +63,10 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    uniqueName="calc-1"
           />
           <CalcButtonArray
                     defaultHandler={[Function]}
+                    keyPrefix="calc-2"
                     symbols={
                               Array [
                                         Object {
@@ -82,10 +83,10 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    uniqueName="calc-2"
           />
           <CalcButtonArray
                     defaultHandler={[Function]}
+                    keyPrefix="calc-3"
                     symbols={
                               Array [
                                         Object {
@@ -102,10 +103,10 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    uniqueName="calc-3"
           />
           <CalcButtonArray
                     defaultHandler={[Function]}
+                    keyPrefix="calc-4"
                     symbols={
                               Array [
                                         Object {
@@ -117,9 +118,11 @@ ShallowWrapper {
                                         Object {
                                           "text": ".",
                                         },
+                                        Object {
+                                          "text": "√",
+                                        },
                                       ]
                     }
-                    uniqueName="calc-4"
           />
 </div>,
       ],
@@ -147,6 +150,7 @@ ShallowWrapper {
           "children": Array [
             <CalcButtonArray
               defaultHandler={[Function]}
+              keyPrefix="calc-0"
               symbols={
                             Array [
                                           Object {
@@ -163,10 +167,10 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              uniqueName="calc-0"
 />,
             <CalcButtonArray
               defaultHandler={[Function]}
+              keyPrefix="calc-1"
               symbols={
                             Array [
                                           Object {
@@ -183,10 +187,10 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              uniqueName="calc-1"
 />,
             <CalcButtonArray
               defaultHandler={[Function]}
+              keyPrefix="calc-2"
               symbols={
                             Array [
                                           Object {
@@ -203,10 +207,10 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              uniqueName="calc-2"
 />,
             <CalcButtonArray
               defaultHandler={[Function]}
+              keyPrefix="calc-3"
               symbols={
                             Array [
                                           Object {
@@ -223,10 +227,10 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              uniqueName="calc-3"
 />,
             <CalcButtonArray
               defaultHandler={[Function]}
+              keyPrefix="calc-4"
               symbols={
                             Array [
                                           Object {
@@ -238,9 +242,11 @@ ShallowWrapper {
                                           Object {
                                             "text": ".",
                                           },
+                                          Object {
+                                            "text": "√",
+                                          },
                                         ]
               }
-              uniqueName="calc-4"
 />,
           ],
         },
@@ -252,6 +258,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "defaultHandler": [Function],
+              "keyPrefix": "calc-0",
               "symbols": Array [
                 Object {
                   "text": "C",
@@ -266,7 +273,6 @@ ShallowWrapper {
                   "text": "DEL",
                 },
               ],
-              "uniqueName": "calc-0",
             },
             "ref": null,
             "rendered": null,
@@ -278,6 +284,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "defaultHandler": [Function],
+              "keyPrefix": "calc-1",
               "symbols": Array [
                 Object {
                   "text": "7",
@@ -292,7 +299,6 @@ ShallowWrapper {
                   "text": "-",
                 },
               ],
-              "uniqueName": "calc-1",
             },
             "ref": null,
             "rendered": null,
@@ -304,6 +310,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "defaultHandler": [Function],
+              "keyPrefix": "calc-2",
               "symbols": Array [
                 Object {
                   "text": "4",
@@ -318,7 +325,6 @@ ShallowWrapper {
                   "text": "+",
                 },
               ],
-              "uniqueName": "calc-2",
             },
             "ref": null,
             "rendered": null,
@@ -330,6 +336,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "defaultHandler": [Function],
+              "keyPrefix": "calc-3",
               "symbols": Array [
                 Object {
                   "text": "1",
@@ -344,7 +351,6 @@ ShallowWrapper {
                   "text": "=",
                 },
               ],
-              "uniqueName": "calc-3",
             },
             "ref": null,
             "rendered": null,
@@ -356,6 +362,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "defaultHandler": [Function],
+              "keyPrefix": "calc-4",
               "symbols": Array [
                 Object {
                   "text": "%",
@@ -366,8 +373,10 @@ ShallowWrapper {
                 Object {
                   "text": ".",
                 },
+                Object {
+                  "text": "√",
+                },
               ],
-              "uniqueName": "calc-4",
             },
             "ref": null,
             "rendered": null,
@@ -394,6 +403,7 @@ ShallowWrapper {
           <div>
             <CalcButtonArray
                         defaultHandler={[Function]}
+                        keyPrefix="calc-0"
                         symbols={
                                     Array [
                                                 Object {
@@ -410,10 +420,10 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        uniqueName="calc-0"
             />
             <CalcButtonArray
                         defaultHandler={[Function]}
+                        keyPrefix="calc-1"
                         symbols={
                                     Array [
                                                 Object {
@@ -430,10 +440,10 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        uniqueName="calc-1"
             />
             <CalcButtonArray
                         defaultHandler={[Function]}
+                        keyPrefix="calc-2"
                         symbols={
                                     Array [
                                                 Object {
@@ -450,10 +460,10 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        uniqueName="calc-2"
             />
             <CalcButtonArray
                         defaultHandler={[Function]}
+                        keyPrefix="calc-3"
                         symbols={
                                     Array [
                                                 Object {
@@ -470,10 +480,10 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        uniqueName="calc-3"
             />
             <CalcButtonArray
                         defaultHandler={[Function]}
+                        keyPrefix="calc-4"
                         symbols={
                                     Array [
                                                 Object {
@@ -485,9 +495,11 @@ ShallowWrapper {
                                                 Object {
                                                   "text": ".",
                                                 },
+                                                Object {
+                                                  "text": "√",
+                                                },
                                               ]
                         }
-                        uniqueName="calc-4"
             />
 </div>,
         ],
@@ -515,6 +527,7 @@ ShallowWrapper {
             "children": Array [
               <CalcButtonArray
                 defaultHandler={[Function]}
+                keyPrefix="calc-0"
                 symbols={
                                 Array [
                                                 Object {
@@ -531,10 +544,10 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                uniqueName="calc-0"
 />,
               <CalcButtonArray
                 defaultHandler={[Function]}
+                keyPrefix="calc-1"
                 symbols={
                                 Array [
                                                 Object {
@@ -551,10 +564,10 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                uniqueName="calc-1"
 />,
               <CalcButtonArray
                 defaultHandler={[Function]}
+                keyPrefix="calc-2"
                 symbols={
                                 Array [
                                                 Object {
@@ -571,10 +584,10 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                uniqueName="calc-2"
 />,
               <CalcButtonArray
                 defaultHandler={[Function]}
+                keyPrefix="calc-3"
                 symbols={
                                 Array [
                                                 Object {
@@ -591,10 +604,10 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                uniqueName="calc-3"
 />,
               <CalcButtonArray
                 defaultHandler={[Function]}
+                keyPrefix="calc-4"
                 symbols={
                                 Array [
                                                 Object {
@@ -606,9 +619,11 @@ ShallowWrapper {
                                                 Object {
                                                   "text": ".",
                                                 },
+                                                Object {
+                                                  "text": "√",
+                                                },
                                               ]
                 }
-                uniqueName="calc-4"
 />,
             ],
           },
@@ -620,6 +635,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "defaultHandler": [Function],
+                "keyPrefix": "calc-0",
                 "symbols": Array [
                   Object {
                     "text": "C",
@@ -634,7 +650,6 @@ ShallowWrapper {
                     "text": "DEL",
                   },
                 ],
-                "uniqueName": "calc-0",
               },
               "ref": null,
               "rendered": null,
@@ -646,6 +661,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "defaultHandler": [Function],
+                "keyPrefix": "calc-1",
                 "symbols": Array [
                   Object {
                     "text": "7",
@@ -660,7 +676,6 @@ ShallowWrapper {
                     "text": "-",
                   },
                 ],
-                "uniqueName": "calc-1",
               },
               "ref": null,
               "rendered": null,
@@ -672,6 +687,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "defaultHandler": [Function],
+                "keyPrefix": "calc-2",
                 "symbols": Array [
                   Object {
                     "text": "4",
@@ -686,7 +702,6 @@ ShallowWrapper {
                     "text": "+",
                   },
                 ],
-                "uniqueName": "calc-2",
               },
               "ref": null,
               "rendered": null,
@@ -698,6 +713,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "defaultHandler": [Function],
+                "keyPrefix": "calc-3",
                 "symbols": Array [
                   Object {
                     "text": "1",
@@ -712,7 +728,6 @@ ShallowWrapper {
                     "text": "=",
                   },
                 ],
-                "uniqueName": "calc-3",
               },
               "ref": null,
               "rendered": null,
@@ -724,6 +739,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "defaultHandler": [Function],
+                "keyPrefix": "calc-4",
                 "symbols": Array [
                   Object {
                     "text": "%",
@@ -734,8 +750,10 @@ ShallowWrapper {
                   Object {
                     "text": ".",
                   },
+                  Object {
+                    "text": "√",
+                  },
                 ],
-                "uniqueName": "calc-4",
               },
               "ref": null,
               "rendered": null,

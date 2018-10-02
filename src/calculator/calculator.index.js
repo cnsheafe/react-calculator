@@ -6,6 +6,7 @@ export default class Calculator extends React.Component {
   state = {
     total: undefined,
     buffer: '',
+    cursorPosition: 0,
   }
 
   appendButtonSymbolToBuffer = (evt) => {
@@ -18,7 +19,57 @@ export default class Calculator extends React.Component {
   appendKeyStrokesToBuffer = (evt) => {
     const buffer = evt.target.value
 
-    this.setState({ buffer})
+    this.setState({ buffer })
+  }
+
+  /**
+   * Helper function to #parse for addition
+   * @param {string} input
+   */
+  parseAdditionAndSubtraction = (input) => {
+    const re = /(-?[0-9]+(?:\.[0-9]+)?)(\+|-)([0-9]+(?:\.[0-9]+)?)/
+
+    if (!re.test(input)) return input
+
+    const parsed = input.replace(re, (match, firstOperand, operator, secondOperand) => {
+      switch (operator) {
+      case '+':
+        return parseFloat(firstOperand) + parseFloat(secondOperand)
+      default:
+        return parseFloat(firstOperand) - parseFloat(secondOperand)
+      }
+    })
+
+    return this.parseAdditionAndSubtraction(parsed)
+  }
+
+  parseMultiplicationAndDivision = (input) => {
+    const re = /(-?[0-9]+(?:\.[0-9]+)?)(\*|\/)(-?[0-9]+(?:\.[0-9]+)?)/
+    
+    if (!re.test(input)) return input
+
+    const parsed = input.replace(re, (match, firstOperand, operator, secondOperand) => {
+      switch (operator) {
+      case '*':
+        return parseFloat(firstOperand) * parseFloat(secondOperand)
+      default:
+        return parseFloat(firstOperand) / parseFloat(secondOperand)
+      }
+    })
+
+    return this.parseMultiplicationAndDivision(parsed)
+  }
+
+  parseSquareRoot = (input) => {
+    const re = /\u221a([0-9]+(?:\.[0-9])?)/
+
+    if (!re.test(input)) return input
+
+    const parsed = input.replace(re, (match, operand) => {
+      return Math.sqrt(operand)
+    })
+
+    return this.parseMultiplicationAndDivision(parsed)
   }
 
   render() {
@@ -77,6 +128,7 @@ export default class Calculator extends React.Component {
               { text: '%' },
               { text: '0' },
               { text: '.' },
+              { text: '\u221a' }
             ]}
             defaultHandler={this.appendButtonSymbolToBuffer}
             keyPrefix="calc-4"
