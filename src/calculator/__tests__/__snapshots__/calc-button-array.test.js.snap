@@ -5,6 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CalcButtonArray
     defaultHandler={[Function]}
+    keyPrefix="calc-1"
     symbols={
         Array [
             Object {
@@ -21,7 +22,6 @@ ShallowWrapper {
             },
           ]
     }
-    uniqueName="calc-1"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -53,6 +53,7 @@ ShallowWrapper {
           =
 </button>,
       ],
+      "className": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -118,6 +119,7 @@ ShallowWrapper {
             =
 </button>,
         ],
+        "className": undefined,
       },
       "ref": null,
       "rendered": Array [

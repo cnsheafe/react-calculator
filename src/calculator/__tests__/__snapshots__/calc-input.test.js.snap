@@ -25,8 +25,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          autoFocus={undefined}
           onChange={[Function]}
-          onClick={[Function]}
+          onFocus={undefined}
           onKeyPress={undefined}
           type="text"
           value="8+10"
@@ -35,6 +36,7 @@ ShallowWrapper {
           Malformed input.
 </div>,
       ],
+      "className": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -43,8 +45,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "autoFocus": undefined,
           "onChange": [Function],
-          "onClick": [Function],
+          "onFocus": undefined,
           "onKeyPress": undefined,
           "type": "text",
           "value": "8+10",
@@ -75,8 +78,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            autoFocus={undefined}
             onChange={[Function]}
-            onClick={[Function]}
+            onFocus={undefined}
             onKeyPress={undefined}
             type="text"
             value="8+10"
@@ -85,6 +89,7 @@ ShallowWrapper {
             Malformed input.
 </div>,
         ],
+        "className": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -93,8 +98,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "autoFocus": undefined,
             "onChange": [Function],
-            "onClick": [Function],
+            "onFocus": undefined,
             "onKeyPress": undefined,
             "type": "text",
             "value": "8+10",
@@ -165,14 +171,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          autoFocus={undefined}
           onChange={[Function]}
-          onClick={[Function]}
+          onFocus={undefined}
           onKeyPress={undefined}
           type="text"
           value="8+10"
 />,
         <div />,
       ],
+      "className": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -181,8 +189,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "autoFocus": undefined,
           "onChange": [Function],
-          "onClick": [Function],
+          "onFocus": undefined,
           "onKeyPress": undefined,
           "type": "text",
           "value": "8+10",
@@ -213,14 +222,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            autoFocus={undefined}
             onChange={[Function]}
-            onClick={[Function]}
+            onFocus={undefined}
             onKeyPress={undefined}
             type="text"
             value="8+10"
 />,
           <div />,
         ],
+        "className": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -229,8 +240,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "autoFocus": undefined,
             "onChange": [Function],
-            "onClick": [Function],
+            "onFocus": undefined,
             "onKeyPress": undefined,
             "type": "text",
             "value": "8+10",

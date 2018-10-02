@@ -27,6 +27,12 @@ describe('<Calculator />', () => {
     }
 
     it('should append a symbol to the buffer', () => {
+      instance.inputRef = {
+        current: {
+          selectionStart: 1,
+          focus: jest.fn(),
+        }
+      }
       instance.insertButtonSymbolToBuffer(evt)
       expect(wrapper.state().buffer).toBe('7')
       expect(evt.preventDefault).toHaveBeenCalled()
@@ -113,6 +119,12 @@ describe('<Calculator />', () => {
       preventDefault: jest.fn(),
     }
     it('should parse input with mixed operators', () => {
+      instance.inputRef = {
+        current: {
+          focus: jest.fn()
+        }
+      }
+
       wrapper.setState({ buffer: '3+3*5-6' })
       instance.parseInput(evt)
       expect(wrapper.state().buffer).toBe('12')

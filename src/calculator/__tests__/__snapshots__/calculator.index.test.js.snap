@@ -19,14 +19,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Unknown
+          autoFocus={true}
           buffer=""
           calculate={[Function]}
+          className="calculator__input"
           errorMessage=""
           onChange={[Function]}
-          updateCursorPosition={[Function]}
+          onFocus={[Function]}
 />,
-        <div>
+        <div
+          className="calculator__key-grid"
+>
           <CalcButtonArray
+                    className="calculator__row"
                     defaultHandler={[Function]}
                     keyPrefix="calc-0"
                     symbols={
@@ -49,6 +54,7 @@ ShallowWrapper {
                     }
           />
           <CalcButtonArray
+                    className="calculator__row"
                     defaultHandler={[Function]}
                     keyPrefix="calc-1"
                     symbols={
@@ -69,6 +75,7 @@ ShallowWrapper {
                     }
           />
           <CalcButtonArray
+                    className="calculator__row"
                     defaultHandler={[Function]}
                     keyPrefix="calc-2"
                     symbols={
@@ -89,6 +96,7 @@ ShallowWrapper {
                     }
           />
           <CalcButtonArray
+                    className="calculator__row"
                     defaultHandler={[Function]}
                     keyPrefix="calc-3"
                     symbols={
@@ -109,6 +117,7 @@ ShallowWrapper {
                     }
           />
           <CalcButtonArray
+                    className="calculator__row"
                     defaultHandler={[Function]}
                     keyPrefix="calc-4"
                     symbols={
@@ -131,6 +140,7 @@ ShallowWrapper {
           />
 </div>,
       ],
+      "className": "calculator",
     },
     "ref": null,
     "rendered": Array [
@@ -139,11 +149,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "autoFocus": true,
           "buffer": "",
           "calculate": [Function],
+          "className": "calculator__input",
           "errorMessage": "",
           "onChange": [Function],
-          "updateCursorPosition": [Function],
+          "onFocus": [Function],
         },
         "ref": Object {
           "current": null,
@@ -153,9 +165,10 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "propTypes": Object {
             "buffer": [Function],
+            "className": [Function],
             "errorMessage": [Function],
             "onChange": [Function],
-            "updateCursorPosition": [Function],
+            "onFocus": [Function],
           },
           "render": [Function],
         },
@@ -167,6 +180,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <CalcButtonArray
+              className="calculator__row"
               defaultHandler={[Function]}
               keyPrefix="calc-0"
               symbols={
@@ -189,6 +203,7 @@ ShallowWrapper {
               }
 />,
             <CalcButtonArray
+              className="calculator__row"
               defaultHandler={[Function]}
               keyPrefix="calc-1"
               symbols={
@@ -209,6 +224,7 @@ ShallowWrapper {
               }
 />,
             <CalcButtonArray
+              className="calculator__row"
               defaultHandler={[Function]}
               keyPrefix="calc-2"
               symbols={
@@ -229,6 +245,7 @@ ShallowWrapper {
               }
 />,
             <CalcButtonArray
+              className="calculator__row"
               defaultHandler={[Function]}
               keyPrefix="calc-3"
               symbols={
@@ -249,6 +266,7 @@ ShallowWrapper {
               }
 />,
             <CalcButtonArray
+              className="calculator__row"
               defaultHandler={[Function]}
               keyPrefix="calc-4"
               symbols={
@@ -270,6 +288,7 @@ ShallowWrapper {
               }
 />,
           ],
+          "className": "calculator__key-grid",
         },
         "ref": null,
         "rendered": Array [
@@ -278,6 +297,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "className": "calculator__row",
               "defaultHandler": [Function],
               "keyPrefix": "calc-0",
               "symbols": Array [
@@ -306,6 +326,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "className": "calculator__row",
               "defaultHandler": [Function],
               "keyPrefix": "calc-1",
               "symbols": Array [
@@ -332,6 +353,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "className": "calculator__row",
               "defaultHandler": [Function],
               "keyPrefix": "calc-2",
               "symbols": Array [
@@ -358,6 +380,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "className": "calculator__row",
               "defaultHandler": [Function],
               "keyPrefix": "calc-3",
               "symbols": Array [
@@ -384,6 +407,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "className": "calculator__row",
               "defaultHandler": [Function],
               "keyPrefix": "calc-4",
               "symbols": Array [
@@ -420,14 +444,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Unknown
+            autoFocus={true}
             buffer=""
             calculate={[Function]}
+            className="calculator__input"
             errorMessage=""
             onChange={[Function]}
-            updateCursorPosition={[Function]}
+            onFocus={[Function]}
 />,
-          <div>
+          <div
+            className="calculator__key-grid"
+>
             <CalcButtonArray
+                        className="calculator__row"
                         defaultHandler={[Function]}
                         keyPrefix="calc-0"
                         symbols={
@@ -450,6 +479,7 @@ ShallowWrapper {
                         }
             />
             <CalcButtonArray
+                        className="calculator__row"
                         defaultHandler={[Function]}
                         keyPrefix="calc-1"
                         symbols={
@@ -470,6 +500,7 @@ ShallowWrapper {
                         }
             />
             <CalcButtonArray
+                        className="calculator__row"
                         defaultHandler={[Function]}
                         keyPrefix="calc-2"
                         symbols={
@@ -490,6 +521,7 @@ ShallowWrapper {
                         }
             />
             <CalcButtonArray
+                        className="calculator__row"
                         defaultHandler={[Function]}
                         keyPrefix="calc-3"
                         symbols={
@@ -510,6 +542,7 @@ ShallowWrapper {
                         }
             />
             <CalcButtonArray
+                        className="calculator__row"
                         defaultHandler={[Function]}
                         keyPrefix="calc-4"
                         symbols={
@@ -532,6 +565,7 @@ ShallowWrapper {
             />
 </div>,
         ],
+        "className": "calculator",
       },
       "ref": null,
       "rendered": Array [
@@ -540,11 +574,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "autoFocus": true,
             "buffer": "",
             "calculate": [Function],
+            "className": "calculator__input",
             "errorMessage": "",
             "onChange": [Function],
-            "updateCursorPosition": [Function],
+            "onFocus": [Function],
           },
           "ref": Object {
             "current": null,
@@ -554,9 +590,10 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "propTypes": Object {
               "buffer": [Function],
+              "className": [Function],
               "errorMessage": [Function],
               "onChange": [Function],
-              "updateCursorPosition": [Function],
+              "onFocus": [Function],
             },
             "render": [Function],
           },
@@ -568,6 +605,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <CalcButtonArray
+                className="calculator__row"
                 defaultHandler={[Function]}
                 keyPrefix="calc-0"
                 symbols={
@@ -590,6 +628,7 @@ ShallowWrapper {
                 }
 />,
               <CalcButtonArray
+                className="calculator__row"
                 defaultHandler={[Function]}
                 keyPrefix="calc-1"
                 symbols={
@@ -610,6 +649,7 @@ ShallowWrapper {
                 }
 />,
               <CalcButtonArray
+                className="calculator__row"
                 defaultHandler={[Function]}
                 keyPrefix="calc-2"
                 symbols={
@@ -630,6 +670,7 @@ ShallowWrapper {
                 }
 />,
               <CalcButtonArray
+                className="calculator__row"
                 defaultHandler={[Function]}
                 keyPrefix="calc-3"
                 symbols={
@@ -650,6 +691,7 @@ ShallowWrapper {
                 }
 />,
               <CalcButtonArray
+                className="calculator__row"
                 defaultHandler={[Function]}
                 keyPrefix="calc-4"
                 symbols={
@@ -671,6 +713,7 @@ ShallowWrapper {
                 }
 />,
             ],
+            "className": "calculator__key-grid",
           },
           "ref": null,
           "rendered": Array [
@@ -679,6 +722,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "className": "calculator__row",
                 "defaultHandler": [Function],
                 "keyPrefix": "calc-0",
                 "symbols": Array [
@@ -707,6 +751,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "className": "calculator__row",
                 "defaultHandler": [Function],
                 "keyPrefix": "calc-1",
                 "symbols": Array [
@@ -733,6 +778,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "className": "calculator__row",
                 "defaultHandler": [Function],
                 "keyPrefix": "calc-2",
                 "symbols": Array [
@@ -759,6 +805,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "className": "calculator__row",
                 "defaultHandler": [Function],
                 "keyPrefix": "calc-3",
                 "symbols": Array [
@@ -785,6 +832,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "className": "calculator__row",
                 "defaultHandler": [Function],
                 "keyPrefix": "calc-4",
                 "symbols": Array [

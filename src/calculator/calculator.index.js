@@ -2,11 +2,14 @@ import React from 'react'
 import CalcInput from './calc-input'
 import CalcButtonArray from './calc-button-array'
 import pipe from '../util/pipe'
+import './calculator.css'
+import bem from '../util/bem'
+
+const cn = bem('calculator')
 
 export default class Calculator extends React.Component {
   state = {
     buffer: '',
-    cursorPos: 0,
     errorMessage: '',
   }
 
@@ -16,25 +19,29 @@ export default class Calculator extends React.Component {
     // Prevents trigger submit action
     evt.preventDefault()
     const symbol = evt.target.textContent
-    const { buffer, cursorPos } = this.state
+    const { buffer } = this.state
+
+    const ref = this.inputRef.current
+    const cursorPos = ref.selectionStart
+    ref.focus()
 
     const newBuffer = `${buffer.slice(0, cursorPos)}${symbol}${buffer.slice(cursorPos)}`
 
-    this.setState({ buffer: newBuffer, cursorPos: cursorPos + 1 })
+    this.setState({ buffer: newBuffer })
   }
 
   insertKeyStrokesToBuffer = (evt) => {
     const buffer = evt.target.value
 
-    const cursorPos = this.inputRef.current.selectionStart
-
-    this.setState({ buffer, cursorPos })
+    this.setState({ buffer })
   }
 
-  updateCursorPosition = (evt) => {
-    const cursorPos = evt.target.selectionStart
-
-    this.setState({ cursorPos })
+  /**
+   * Force focus on cursor at end of text
+   */
+  onInputFocus = (evt) => {
+    const len = evt.target.value.length
+    evt.target.setSelectionRange(len, len)
   }
 
   /**
@@ -102,7 +109,7 @@ export default class Calculator extends React.Component {
 
   validateForIllegalCharacters = (input) => {
     // eslint-disable-next-line no-useless-escape
-    const re = /[^0-9.\+\-*\\\u221a%]+/
+    const re = /[^0-9.\+\-*\/\u221a%]+/
 
     if (re.test(input)) return 'Illegal characters present.'
     return ''
@@ -112,6 +119,7 @@ export default class Calculator extends React.Component {
     evt.preventDefault()
     const { buffer } = this.state
 
+    this.inputRef.current.focus()
     if (!buffer) return
 
     let errorMessage = this.validateForIllegalCharacters(buffer)
@@ -139,14 +147,16 @@ export default class Calculator extends React.Component {
     }
   }
 
-  deleteLastCharacter = () => {
+  deleteLastCharacter = (evt) => {
+    evt.preventDefault()
     const { buffer } = this.state
 
     const parsed = buffer.slice(0, buffer.length - 1)
     this.setState({ buffer: parsed })
   }
 
-  clearBuffer = () => {
+  clearBuffer = (evt) => {
+    evt.preventDefault()
     this.setState({ buffer: '' })
   }
 
@@ -154,16 +164,18 @@ export default class Calculator extends React.Component {
     const { buffer, errorMessage } = this.state
 
     return (
-      <form>
+      <form className={cn.b()}>
         <CalcInput
           onChange={this.insertKeyStrokesToBuffer}
           calculate={this.parseInputViaEnter}
           buffer={buffer}
-          updateCursorPosition={this.updateCursorPosition}
           errorMessage={errorMessage}
           ref={this.inputRef}
+          className={cn.e('input')}
+          onFocus={this.onInputFocus}
+          autoFocus
         />
-        <div>
+        <div className={cn.e('key-grid')}>
           <CalcButtonArray
             symbols={[
               { text: 'C', onClick: this.clearBuffer },
@@ -173,6 +185,7 @@ export default class Calculator extends React.Component {
             ]}
             defaultHandler={this.insertButtonSymbolToBuffer}
             keyPrefix="calc-0"
+            className={cn.e('row')}
           />
           <CalcButtonArray
             symbols={[
@@ -183,6 +196,7 @@ export default class Calculator extends React.Component {
             ]}
             defaultHandler={this.insertButtonSymbolToBuffer}
             keyPrefix="calc-1"
+            className={cn.e('row')}
           />
           <CalcButtonArray
             symbols={[
@@ -193,6 +207,7 @@ export default class Calculator extends React.Component {
             ]}
             defaultHandler={this.insertButtonSymbolToBuffer}
             keyPrefix="calc-2"
+            className={cn.e('row')}
           />
           <CalcButtonArray
             symbols={[
@@ -203,6 +218,7 @@ export default class Calculator extends React.Component {
             ]}
             defaultHandler={this.insertButtonSymbolToBuffer}
             keyPrefix="calc-3"
+            className={cn.e('row')}
           />
           <CalcButtonArray
             symbols={[
@@ -213,6 +229,7 @@ export default class Calculator extends React.Component {
             ]}
             defaultHandler={this.insertButtonSymbolToBuffer}
             keyPrefix="calc-4"
+            className={cn.e('row')}
           />
         </div>
       </form>

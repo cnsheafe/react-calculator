@@ -8,9 +8,13 @@ import { string, func, shape, arrayOf } from 'prop-types'
  * @param {string} props.keyPrefix prefix for react-key of each button
  * @param {function} props.defaultHandler called when symbol.onClick is falsy
  */
-const CalcButtonArray = ({ symbols, keyPrefix, defaultHandler }) => (
-  <div>
-    {symbols.map(s => <button key={`${keyPrefix}-${s.text}`} onClick={s.onClick || defaultHandler}>{s.text}</button>)}
+const CalcButtonArray = ({ symbols, keyPrefix, defaultHandler, className }) => (
+  <div className={className}>
+    {symbols.map(s => (
+      <button key={`${keyPrefix}-${s.text}`} onClick={s.onClick || defaultHandler}>
+        {s.text}
+      </button>
+    ))}
   </div>
 )
 
@@ -20,7 +24,8 @@ CalcButtonArray.propTypes = {
   symbols: arrayOf(shape({
     text: string.isRequired,
     onClick: func
-  })).isRequired
+  })).isRequired,
+  className: string,
 }
 
 export default CalcButtonArray
