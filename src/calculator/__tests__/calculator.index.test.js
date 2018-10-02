@@ -95,4 +95,12 @@ describe('<Calculator />', () => {
       expect(parsed).toBe('10')
     })
   })
+
+  describe('#parseInput', () => {
+    it('should parse input with mixed operators', () => {
+      wrapper.setState({ buffer: '3+3*5-6' })
+      const parsed = instance.parseInput()
+      expect(parsed).toBe('12')
+    })
+  })
 })

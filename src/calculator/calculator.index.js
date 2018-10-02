@@ -1,6 +1,7 @@
 import React from 'react'
 import CalcInput from './calc-input'
 import CalcButtonArray from './calc-button-array'
+import pipe from '../util/pipe'
 
 export default class Calculator extends React.Component {
   state = {
@@ -70,6 +71,19 @@ export default class Calculator extends React.Component {
     })
 
     return this.parseMultiplicationAndDivision(parsed)
+  }
+
+  parseInput = () => {
+    let { buffer } = this.state
+
+    if (!buffer) return
+
+    return pipe(
+      buffer,
+      this.parseSquareRoot,
+      this.parseMultiplicationAndDivision,
+      this.parseAdditionAndSubtraction
+    )
   }
 
   render() {
